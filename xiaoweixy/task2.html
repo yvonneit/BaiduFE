@@ -8,52 +8,162 @@
         body{
             margin: 0;
             padding: 0;
-            background: lightgrey;
+            background-color: rgba(240,240,240,1);
+            font-family: sans-serif;
         }
         a{
             text-decoration: none;
         }
+        p{
+            line-height: 2;  /*默认行高为1*/
+            text-indent: 2em;
+            font-size: 12px;
+        }
+        ul{
+            list-style-type: disc; /*设置列表项标记的类型，disc是实心圆*/
+        }
+        .left{
+        float:left;
+        }
+        .right{
+
+            float:right;
+        }
         .title{
             text-align: center;
-            border: 1px solid;
-            width: 100%;
-            background: #363636;
-            height: 80px;
+            border:1px solid;
+            font-size:12px;
+            width:100%;
+            background:lightgrey;
+            height:50px;
         }
         .title img{
-            width: 80px;
-            height: 80px;
+            width:60px;
+            height: 60px;
             float: left;
         }
         .title div{
             width:35%;
             height:100%;
+
         }
         .title ul li{
-            margin-right: 20px;
-            float: left;
+            margin-right:20px;
+            float:left;
         }
         .title a{
-            color:#fff;
+            color:black;
         }
         .title .import{
             color:#b0b0b0;
         }
-        .left{
-          float:left;
+        .body1{
+            border:1px solid;
+            margin:15px 10px;
+            background:#FFF;
+            font:#000;
+            font-weight:bold;
+            box-shadow: 0px 1px 2px #000;
+            padding:20px; /*内边距样式，文字到边框的距离*/
         }
-        .right{
-          float:right;
+
+        .body1 div{
+            line-height: 1.5em;
+            margin:0 15px;
         }
+        .body1 img{
+            width:200px;
+        }
+        .body1 ul{
+            text-align: left;
+            font-size:13px;
+            list-style:none;
+        }
+        .body1 .beautiful{
+            width:150px;
+            height:150px;
+            line-height:1.2em;
+            margin:10px;
+            text-align: center;
+            border:1px solid #363636;
+        }
+        .body1 .beautiful img{
+            width:100px;
+            height:100px;
+        }
+        .body1 .table-head{
+            border:1px solid;
+            margin:20px 15px;
+        }
+        .author{
+            font-size: 0.92em;
+            color: rgb(200,200,200);
+            text-indent: 0em;  /*将段落的第一行缩进50em*/
+        }
+        .leftmenu{
+            border-left:4px solid #b0b0b0;
+            padding-left:20px;
+        }
+        table{
+            font-size:15px;
+            border-collapse: collapse;
+            width: 100%;
+            border:1px solid #b0b0b0;
+            margin: 0 auto;
+            table-layout:fixed;
+        }
+        td,th{
+            text-align: left;
+        }
+        th{
+            color:#FFF;
+            background:#000;
+
+        }
+        .table-head tr:last-child{
+            background:#b0b0b0;
+        }
+        input[type="text"]{
+            width: 180px;
+            border:1px solid #808080;
+        }
+        span{
+            font-size:10px;
+            color:#b0b0b0;
+        }
+        form{
+            margin:15px 15px;
+            font-size:12px;
+        }
+        form table{
+            font-size:12px;
+            border:0px;
+            vertical-align: center;
+            height:200px;
+        }
+        form tr td:first-child{
+            text-align: right;
+        }
+        input[type="button"]{
+            display:block;
+            color:#FFF;
+            font-size:25px;
+            margin:0 auto;
+            width:80%;
+            background:#205AA7;
+            height:50px;
+        }
+
         </style>
     </head>
     <body>
+
     <div class="title">
-        <div class="left">
-            <img src="image/logo1.jpg">
+        <div class="left" style="margin:0 auto;">
+            <img src="image/logo.png">
         </div>
-        <!-- nav标签定义导航链接部分 -->
         <div class="right">
+        <!-- nav标签定义导航链接部分 -->
             <nav>
                 <ul>
                     <li><a href="#">导航链接一</a></li>
@@ -65,7 +175,7 @@
         </div>
     </div>
 
-        <div>
+    <div class="body1">
         <!-- header定义文档的页眉（介绍信息） -->
         <header>
             <!-- main标签规定文档的主要内容 -->
@@ -73,8 +183,7 @@
                 <h2>文章一级标题</h2>
                 <h3>文章二级标题</h3>
                 <!-- span标签用来组合文档中的行内元素 -->
-                <span>文章作者</span>
-                <span>文章发表时间</span>
+                <span class="author">文章作者 2017-5-20</span>
                 <p>「人不敬我，是我無才；我不敬人，是我無德；人不容我，是我無能；我不容人，是我無量；人不助我，是我無為；我不助人，是我無善！」很棒的一段話，值得深思自省。<br /> 在這年頭，有些人遇事不自省，
                     <!-- b标签规定粗体文字 -->
                     <a href="http://www.baidu.com">点此搜索</a>，錯都不在自己，全是別人的錯，<b>反觀有品德的人</b>，凡事自省已身，修身養性.
@@ -85,14 +194,14 @@
                         <a href="http://www.baidu.com" target="_blank">点此搜索</a>我选择沉默；如果沉默是一种伤害，我选择离开。有的东西你再喜欢也不会属于你，有的东西你再留恋也注定要放弃的。男人哭了，是因为他真的爱了；女人哭了，是因为她真的放弃了。爱一个人不一定要拥有，但拥有了就一定要好好的去珍惜。</p>
             </main>
         </header>
-        </div>
+    </div>
 
+    <div class="body1">
         <header>
             <main>
                 <h2>另一篇文章一级标题</h2>
                 <h3>文章二级标题</h3>
-                <span>文章作者</span>
-                <span>文章发表时间</span>
+                <span class="author">文章作者 2017-5-20</span>
                 <p>这是一个很长的段落这是一个很长的段落这是一个很长的段落这是一个很长的段落这是一个很长的段落这是一个很长的段落这是一个很长的段落这是一个很长的段落<br /> 这是一个很长的段落,这是一个很长的段落,
                     <a href="http://www.baidu.com">点此搜索</a>这是一个很长的段落,<b>这是一个很长的段落</b>,这是一个很长的段落,<br/>这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,</p>
                 <img src="image/1.jpg" class="img" />
@@ -103,48 +212,53 @@
                 </ul>
             </main>
         </header>
+    </div>
+
+    <div class="body1">
         <header>
             <main>
                 <h2>图片</h2>
-                <div>
+                <div class="beautiful">
                     <p>好看的图片</p>
                     <img src="image/1.jpg" />
                 </div>
-                <div>
+                <div class="beautiful">
                     <p>好看的图片</p>
                     <img src="image/1.jpg" />
                 </div>
-                <div>
+                <div class="beautiful">
                     <p>好看的图片</p>
                     <img src="image/1.jpg" />
                 </div>
-                <div>
+                <div class="beautiful">
                     <p>好看的图片</p>
                     <img src="image/1.jpg" />
                 </div>
-                <div>
+                <div class="beautiful">
                     <p>好看的图片</p>
                     <img src="image/1.jpg" />
                 </div>
-                <div>
+                <div class="beautiful">
                     <p>好看的图片</p>
                     <img src="image/1.jpg" />
                 </div>
             </main>
         </header>
+    </div>
+
+    <div class="body1">
         <header>
             <main>
                 <h2>最后一篇文章一级标题</h2>
                 <h3>文章二级标题</h3>
-                <span>文章作者</span>
-                <span>文章发表时间</span>
+                <span class="author">文章作者 2017-5-20</span>
                 <ol>
                     <li>排名1</li>
                     <li>排名2</li>
                     <li>排名3</li>
                 </ol>
-
-                <table border="1px solid" cellspacing="0" cellpadding="0">
+            <div class="table-head">
+                <table>
                     <tr>
                         <th>表头</th>
                         <th>表头</th>
@@ -184,44 +298,77 @@
                         <td colspan="2">1000</td>
                     </tr>
                 </table>
+            </div>
             </main>
         </header>
-        <header>
-            <main>
-                <h2>这里以后是一个侧栏，这是侧栏的标题</h2>
-                <h3>侧栏注册窗口标题</h3>
-                <form action="" method="post">
-                    <span>请输入邮箱地址：</span>
-                    <input type="email" placeholder="这是一个文本输入框" />
-                    <p>邮箱地址请按要求格式输入</p>
-                    <span>请输入密码：<input type="password" placeholder="这是一个文本输入框"/></span><br />
-                    <span>请重复密码：<input type="password" placeholder="这是一个文本输入框"/></span>
-                    <p>密码请为6-16位英文数字</p>
-                    <div>
-                        <span>性别:</span>
-                        <input type="radio" checked="checked" name="gender" />男
-                        <input type="radio" name="gender" />女<br />
-                        <span>城市:</span>
-                        <select>
-                            <option>北京</option>
-                            <option>上海</option>
-                            <option>广州</option>
-                            <option>深圳</option>
-                            <option>杭州</option>
-                        </select><br />
-                        <span>爱好:</span>
-                        <input type="checkbox" />运动
-                        <input type="checkbox" />艺术
-                        <input type="checkbox" />科学<br />
-                        <span>个人描述</span>
-                        <textarea placeholder="这是一个多行输入框,输入您的个人描述"></textarea>
-                    </div>
-                    <input type="submit" value="确认提交" />
-                </form>
-            </main>
-        </header>
+    </div>
 
+    <div class="body1">
+            <div class="leftmenu">
+                <h2>这里以后是一个侧栏，这是侧栏的标题</h2>
+            </div>
+            <div>
+                  <form action="" method="post">
+                    <table>
+                        <tr>
+                            <td><label>请输入邮箱地址:</label></td>
+                            <td><input type="text" value="这是一个文本输入框"></td>
+                         </tr>
+                         <tr>
+                            <td><span>邮箱地址清按要求格式输入</span></td>
+                         </tr>
+                         <tr>
+                            <td><label>请输入密码：</label></td>
+                            <td><input type="text" value="这是一个文本输入框"></td>
+                         </tr>
+                          <tr>
+                            <td><label>请重复输入密码：</label></td>
+                            <td><input type="text" value="这是一个文本输入框"></td>
+                          </tr>
+                          <tr>
+                            <td><span>密码请为6-16位英文数字</span></td>
+                          </tr>
+                          <tr>
+                            <td><lable>性别：</lable></td>
+                            <td>
+                                <input type="radio" name="sex1">男</input>
+                                <input type="radio" name="sex1">女</input>
+                            </td>
+                          </tr>
+                           <tr>
+                            <td><lable>城市：</lable></td>
+                            <td>
+                                <select name="">
+                                    <option value="0">北京</option>
+                                    <option value="1">杭州</option>
+                                </select>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><lable>爱好：</lable></td>
+                            <td>
+                                <input type="checkbox" >运动</input>
+                                <input type="checkbox" >艺术</input>
+                                <input type="checkbox" >科学</input>
+                            </td>
+                           </tr>
+                            <tr>
+                                <td><lable>个人描述：</lable></td>
+                                <td>
+                                    <textarea rows="5" cols="50">
+                                    这是一个自动换行的文本输入框
+                                    </textarea>
+                                </td>
+                          </tr>
+                    </table>
+                      <input type="button" value="确认提交" />
+                  </form>
+            </div>
+    </div>
+
+    <div class="title">
         <footer>版权所有@</footer>
+    </div>
 
     </body>
 </html>
