@@ -1,0 +1,55 @@
+*{
+    /*将 box-sizing 设置为 "border-box":令浏览器呈现出带有指定宽度和高度的框，并把边框和内边距放入框中。*/
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.container {
+    background-color: #eee;
+    border:1px solid #999;
+    overflow:auto; /*清除浮动，包含所有浮动的子元素*/
+    padding:20px;
+    min-width:600px;
+}
+
+.left{
+    width: 200px;
+    float: left;
+    padding: 20px;
+    background: #fff;
+    border:1px solid #333;
+}
+
+.right {
+    width: 120px;
+    float: right;
+    padding: 20px;
+    background: #fff;
+    border:1px solid #333;
+}
+
+.main {
+    height: 100%;
+    margin-left: 220px;
+    margin-right: 140px;
+    padding: 20px;
+    background: #fff;
+    line-height: 1.7em;
+    border:1px solid #333;
+}
+
+span {
+    vertical-align: top;
+}
+
+img {
+    width: 80px;
+    height: 80px;
+    background: #eee;
+    margin: 0 auto; /*左右边距根据宽度自适应相同值，即居中*/
+    text-align: center;
+    line-height: 40px; /*两行文本就是80px*/
+    margin-bottom: 10px;
+}
+
