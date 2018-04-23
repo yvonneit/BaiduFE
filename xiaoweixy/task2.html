@@ -89,7 +89,7 @@
         }
         .body1 .beautiful img{
             width:100px;
-            height:100px;
+            height:80px;
         }
         .body1 .table-head{
             border:1px solid;
@@ -126,6 +126,7 @@
         input[type="text"]{
             width: 180px;
             border:1px solid #808080;
+            margin-left: 10px;
         }
         span{
             font-size:10px;
@@ -135,23 +136,58 @@
             margin:15px 15px;
             font-size:12px;
         }
-        form table{
-            font-size:12px;
-            border:0px;
-            vertical-align: center;
-            height:200px;
+
+        div.line{
+            line-height: 2em;
         }
-        form tr td:first-child{
+        #bottom div.line{
+            line-height: 2em;
+        }
+        #bottom select{
+            margin-left: 10px;
+            padding: 3px;
+        }
+
+        #bottom textarea{
+            font-size: 1.2em;
+            font-weight: bold;
+            width: 60%;
+            margin-left: 10px;
+            padding: 0px 3px;
+        }
+        #bottom .prompt{
+            display: inline-block;
+            width: 30%;
+            padding-right: 3px;
             text-align: right;
+            font-size: 0.8em;
+            vertical-align: top;/*顶部对齐*/
         }
-        input[type="button"]{
-            display:block;
-            color:#FFF;
-            font-size:25px;
-            margin:0 auto;
-            width:80%;
-            background:#205AA7;
-            height:50px;
+
+        #bottom input{
+            margin-left: 10px;
+            padding: 3px;
+            font-size: 0.8em;
+        }
+
+        #bottom .hint{
+            display: inline-block;
+            color: gray;
+            margin-left: 10px;
+            font-size: 0.8em;
+            padding-bottom: 1.5em;
+        }
+        #bottom .submitDiv{
+            text-align: center;
+        }
+        #submitBtn{
+            background: royalblue;
+            color: white;
+            width: 95%;
+            height: 40px;
+            margin:20px 0px;
+            border-radius: 10px;
+            border: 2px gray solid;
         }
 
         </style>
@@ -307,61 +343,53 @@
             <div class="leftmenu">
                 <h2>这里以后是一个侧栏，这是侧栏的标题</h2>
             </div>
-            <div>
+            <div id="bottom">
                   <form action="" method="post">
-                    <table>
-                        <tr>
-                            <td><label>请输入邮箱地址:</label></td>
-                            <td><input type="text" value="这是一个文本输入框"></td>
-                         </tr>
-                         <tr>
-                            <td><span>邮箱地址清按要求格式输入</span></td>
-                         </tr>
-                         <tr>
-                            <td><label>请输入密码：</label></td>
-                            <td><input type="text" value="这是一个文本输入框"></td>
-                         </tr>
-                          <tr>
-                            <td><label>请重复输入密码：</label></td>
-                            <td><input type="text" value="这是一个文本输入框"></td>
-                          </tr>
-                          <tr>
-                            <td><span>密码请为6-16位英文数字</span></td>
-                          </tr>
-                          <tr>
-                            <td><lable>性别：</lable></td>
-                            <td>
+                        <div class="line">
+                            <label class="prompt">请输入邮箱地址:</label>
+                            <input type="text" value="这是一个文本输入框">
+                        </div>
+                        <div class="line">
+                            <span class="prompt"></span>
+                            <span class="hint">邮箱地址清按要求格式输入</span>
+                        </div>
+                        <div class="line">
+                            <label class="prompt">请输入密码：</label>
+                            <input type="text" value="这是一个文本输入框">
+                        </div>
+                        <div class="line">
+                            <label class="prompt">请重复输入密码：</label>
+                            <input type="text" value="这是一个文本输入框">
+                        </div>
+                        <div class="line">
+                            <span class="prompt"></span>
+                            <span class="hint">密码请为6-16位英文数字</span>
+                        </div>
+                        <div>
+                            <lable class="prompt">性别：</lable>
                                 <input type="radio" name="sex1">男</input>
                                 <input type="radio" name="sex1">女</input>
-                            </td>
-                          </tr>
-                           <tr>
-                            <td><lable>城市：</lable></td>
-                            <td>
-                                <select name="">
+                        </div>
+                        <div class="line">
+                            <lable class="prompt">城市：</lable>
+                                <select>
                                     <option value="0">北京</option>
                                     <option value="1">杭州</option>
                                 </select>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td><lable>爱好：</lable></td>
-                            <td>
+                        </div>
+                        <div class="line">
+                            <lable class="prompt">爱好：</lable>
                                 <input type="checkbox" >运动</input>
                                 <input type="checkbox" >艺术</input>
                                 <input type="checkbox" >科学</input>
-                            </td>
-                           </tr>
-                            <tr>
-                                <td><lable>个人描述：</lable></td>
-                                <td>
-                                    <textarea rows="5" cols="50">
-                                    这是一个自动换行的文本输入框
-                                    </textarea>
-                                </td>
-                          </tr>
-                    </table>
-                      <input type="button" value="确认提交" />
+                        </div>
+                        <div class="line">
+                            <lable class="prompt">个人描述：</lable>
+                            <textarea cols="100" rows="5">这是一个多行输入框，输入您的个人描述</textarea>
+                        </div>
+                        <div class="submitDiv">
+                            <input id="submitBtn" type="button" value="确认提交" />
+                        </div>
                   </form>
             </div>
     </div>
